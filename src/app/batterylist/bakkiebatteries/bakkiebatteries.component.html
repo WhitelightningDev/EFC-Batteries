@@ -1,0 +1,49 @@
+<div>
+  <h1 class="text-center">Car Models</h1>
+  <p class="text-center mb-4">SMF = Sealed Maintenance Free · AGM = Absorbed Glass Mat · SSM = Start Stop Motion</p>
+</div>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let brand of batterylist">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ brand.brand }}</mat-panel-title>
+      <mat-panel-description>
+        {{ brand.models.length }} Models Available
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <table mat-table [dataSource]="brand.models" class="mat-elevation-z8">
+      <!-- Year Column -->
+      <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <td mat-cell *matCellDef="let element"> {{ element.year }} </td>
+      </ng-container>
+
+      <!-- Model Column -->
+      <ng-container matColumnDef="model">
+        <th mat-header-cell *matHeaderCellDef> Make & Model </th>
+        <td mat-cell *matCellDef="let element"> {{ element.model }} </td>
+      </ng-container>
+
+      <!-- Battery Size Column -->
+      <ng-container matColumnDef="batterySize">
+        <th mat-header-cell *matHeaderCellDef> Battery Size </th>
+        <td mat-cell *matCellDef="let element"> {{ element.batterySize }} </td>
+      </ng-container>
+
+      <!-- Alternative Column -->
+      <ng-container matColumnDef="alternative">
+        <th mat-header-cell *matHeaderCellDef> Alternative </th>
+        <td mat-cell *matCellDef="let element"> {{ element.alternative || 'N/A' }} </td>
+      </ng-container>
+
+      <!-- Technology Column -->
+      <ng-container matColumnDef="technology">
+        <th mat-header-cell *matHeaderCellDef> Technology </th>
+        <td mat-cell *matCellDef="let element"> {{ element.technology }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['year', 'model', 'batterySize', 'alternative', 'technology']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['year', 'model', 'batterySize', 'alternative', 'technology'];"></tr>
+    </table>
+  </mat-expansion-panel>
+</mat-accordion>
