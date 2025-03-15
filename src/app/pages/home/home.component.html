@@ -67,7 +67,7 @@
               <p class="para text-center">
                 Check out our car batteries
               </p>
-              <p><a class="btn btn-lg btn-primary" href="/carbat">View Batteries</a></p>
+              <p><a mat-flat-button class="button mat-flat-button" href="/carbat">View Batteries</a></p>
             </div>
           </div>
 
@@ -80,7 +80,7 @@
               <p class="para text-center">
                 Check out our bike batteries
               </p>
-              <p><a class="btn btn-lg btn-primary" href="#">View Batteries</a></p>
+              <p><a mat-flat-button class="button" href="#">View Batteries</a></p>
             </div>
           </div>
 
@@ -93,7 +93,7 @@
               <p class="para text-center">
                 Check out our bakkie batteries
               </p>
-              <p><a class="btn btn-lg btn-primary" href="/bakkiebat">View Batteries</a></p>
+              <p><a mat-flat-button class="button" href="/bakkiebat">View Batteries</a></p>
             </div>
           </div>
         </div>
@@ -106,10 +106,155 @@
               <p class="para text-center">
                 Check out our truck batteries
               </p>
-              <p><a class="btn btn-lg btn-primary align-self-center" href="#">View Batteries</a></p>
+              <p><a mat-flat-button class="button" href="#">View Batteries</a></p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
+  </div>
+
+
+  <!-- Services container -->
+  <div class="album py-2 bg-body-tertiary">
+    <h2 class="text-center mb-4">Services</h2>
+    <div class="container mt-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+        <!-- Battery Sales -->
+        <div class="col">
+          <mat-card class="service-card" appearance="outlined">
+            <mat-card-header class="card-header">
+              <mat-icon class="service-icon">shopping_cart</mat-icon>
+              <mat-card-title>Battery Sales</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="card-content">
+              High-quality car batteries at competitive prices.
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!-- Battery Fitment -->
+        <div class="col">
+          <mat-card class="service-card" appearance="outlined">
+            <mat-card-header class="card-header">
+              <mat-icon class="service-icon">build</mat-icon>
+              <mat-card-title>Battery Fitment</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="card-content">
+              Professional battery installation services.
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!-- Battery Testing -->
+        <div class="col">
+          <mat-card class="service-card" appearance="outlined">
+            <mat-card-header class="card-header">
+              <mat-icon class="service-icon">battery_charging_full</mat-icon>
+              <mat-card-title>Battery Testing</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="card-content">
+              Ensure your battery is in peak condition with our testing services.
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!-- Battery Charging -->
+        <div class="col">
+          <mat-card class="service-card" appearance="outlined">
+            <mat-card-header class="card-header">
+              <mat-icon class="service-icon">power</mat-icon>
+              <mat-card-title>Battery Charging</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="card-content">
+              Fast and reliable battery charging solutions.
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="text-center m-3">
+      <button mat-flat-button>Give us a call </button>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+      <!-- Location Image -->
+      <div class="col-10 col-sm-8 col-lg-6 text-center">
+        <img src="efclocation.JPG" class="d-block mx-lg-auto img-fluid rounded shadow" alt="Location" width="700" height="500" loading="lazy">
+      </div>
+
+      <!-- Contact Details -->
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Contact Us</h1>
+
+        <div class="mb-3 d-flex align-items-center">
+          <mat-icon class="me-2">location_on</mat-icon>
+          <h5 class="fw-bold mb-0">476 Steve Biko Rd, Gezina, Pretoria, 0084</h5>
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <mat-icon class="me-2">mail</mat-icon>
+          <h5 class="mb-0">
+            <a href="mailto:sales@efcenter.co.za" class="text-decoration-none">sales&#64;efcenter.co.za</a>
+          </h5>
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <mat-icon class="me-2">call</mat-icon>
+          <h5 class="mb-0">
+            <a href="https://wa.me/27760606376" target="_blank" class="text-decoration-none">
+              +27 76 060 6376
+            </a>
+          </h5>
+        </div>
+
+        <div class="mb-4 d-flex align-items-center">
+          <mat-icon class="me-2">schedule</mat-icon>
+          <h5 class="mb-0">Mon - Fri: 8:00 AM - 16:30 PM | Sat: 8:00 AM - 12 PM</h5>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="p-3 border rounded shadow">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <!-- Material Dropdown -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Select Service</label>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Choose a service</mat-label>
+              <mat-select required>
+                <mat-option value="buy-battery">Buy a Battery</mat-option>
+                <mat-option value="battery-fitment">Battery Fitment</mat-option>
+                <mat-option value="battery-testing">Battery Testing</mat-option>
+                <mat-option value="battery-charging">Battery Charging</mat-option>
+                <mat-option value="other">Other</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label fw-bold">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
