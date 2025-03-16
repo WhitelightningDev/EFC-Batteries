@@ -106,6 +106,24 @@
 
 /* Catagory cards end  */
 
+/* carousel start  */
+  /* Ensure images fit properly on all screen sizes */
+  .carousel-item img {
+    width: 100%;
+    object-fit: contain; /* Ensures images are properly scaled */
+  }
+
+
+
+  /* Responsive text alignment */
+  @media (max-width: 768px) {
+    .carousel-caption {
+      text-align: center !important;
+      font-size: 12px;
+    }
+  }
+/* Carousel end  */
+
 
 /* Material Cards start */
 
