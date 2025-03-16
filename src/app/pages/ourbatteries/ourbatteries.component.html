@@ -1,0 +1,97 @@
+<h1 class="text-center m-2">Our Batteries</h1>
+<div>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/platbattery.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Platinum Range</h1>
+        <p class="lead">A Platinum Battery is a high-performance lead-acid battery designed for premium vehicles and
+          demanding applications. It offers superior longevity, durability, and reliability due to advanced plate
+          technology and enhanced corrosion resistance. These batteries provide higher cold-cranking amps (CCA) for
+          better engine starts in extreme temperatures and are ideal for vehicles with high electrical demands.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" (click)="openModal('Platinum Battery')">More info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/golbattery.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Gold Battery</h1>
+        <p class="lead">A Gold Battery is a premium-grade lead-acid battery that delivers excellent performance and
+          longevity. It is designed for everyday driving, providing strong starting power and consistent reliability.
+          Gold batteries typically feature improved internal components that enhance charge retention and cycle life,
+          making them suitable for modern vehicles with standard electrical needs.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" (click)="openModal('Gold Battery')">More info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/efbbattery.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="720" height="550"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">EFB (Enhanced Flooded Battery)</h1>
+        <p class="lead">An EFB Battery is an advanced version of a traditional lead-acid battery, specifically
+          engineered for vehicles with start-stop technology. It features thicker plates and an improved electrolyte
+          circulation system, allowing it to handle frequent charge and discharge cycles. EFBs provide faster recharge
+          rates, better durability, and longer lifespan than standard flooded batteries, making them ideal for vehicles
+          with moderate power demands.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" (click)="openModal('EFB Battery')">More info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/agmbattery.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">AGM (Absorbent Glass Mat) Battery</h1>
+        <p class="lead">An AGM Battery is a high-performance, maintenance-free battery designed for vehicles with
+          advanced electrical systems and start-stop functionality. It uses a special glass mat separator that absorbs
+          the electrolyte, preventing spills and increasing vibration resistance. AGM batteries offer faster charging,
+          deep cycling capabilities, and longer life, making them ideal for luxury vehicles, high-performance cars, and
+          vehicles with heavy electrical loads.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" (click)="openModal('AGM Battery')">More info</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Component -->
+<!-- Assuming you have a Bootstrap modal here -->
+<div class="modal fade" id="batteryModal" tabindex="-1" aria-labelledby="batteryModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="batteryModalLabel">{{ selectedBatteryType }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Bind the sanitized HTML to display it -->
+        <div [innerHTML]="selectedBatteryDescription"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

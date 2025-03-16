@@ -1,0 +1,28 @@
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/bikebattery.png" alt="" width="300" height="300">
+  <h1 class="display-5 fw-bold text-body-emphasis">Bike Batteries</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Please inquire with us about your bike batteries for us to better help you</p>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" [(ngModel)]="userName" name="name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" [(ngModel)]="userEmail" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="bike" class="form-label">Bike</label>
+        <select id="bike" class="form-control" [(ngModel)]="selectedBike" name="bike" required>
+          <option value="" disabled>Select a bike</option>
+          <option *ngFor="let bike of bikes" [value]="bike">{{ bike }}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
