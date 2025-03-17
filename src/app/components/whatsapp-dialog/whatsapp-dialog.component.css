@@ -1,0 +1,17 @@
+.mat-dialog-content {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  margin: 5px 0;
+  background-color: #25d366;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1ebc58;
+}
