@@ -11,9 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class WhatsAppDialogComponent {
   options: string[] = [
-    "How much are your batteries?",
-    "I want to buy a battery.",
-    "Can you give me better options?"
+    "Hi Andre, How much are your batteries?",
+    "I want to buy a battery please quote",
   ];
 
   constructor(private dialogRef: MatDialogRef<WhatsAppDialogComponent>) {}
