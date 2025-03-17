@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../../shared/material/material.module';
 import { TruckBatteryService } from '../../services/truckbattery.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-truckbatteries',
-  imports: [MaterialModule],
+  imports: [MaterialModule, CommonModule],
   templateUrl: './truckbatteries.component.html',
   styleUrl: './truckbatteries.component.css'
 })
