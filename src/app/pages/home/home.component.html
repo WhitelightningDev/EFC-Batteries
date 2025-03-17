@@ -165,7 +165,7 @@
       </div>
     </div>
     <div class="text-center m-3">
-      <button mat-flat-button>Give us a call </button>
+      <a href="https://wa.me/+27760606376?text=Hello!%20I'm%20interested%20in%20your%20service"   target="_blank" rel="noopener noreferrer"  mat-flat-button>Give us a call </a>
     </div>
   </div>
 
@@ -242,13 +242,12 @@
 
         <div class="mb-1 d-flex align-items-center">
           <mat-icon class="me-2 mb-4">location_on</mat-icon>
-          <a href="https://www.google.com/maps?q=476+Steve+Biko+Rd,+Gezina,+Pretoria,+0084"
-             target="_blank"
-             class="text-decoration-none text-dark">
+          <a href="#" (click)="openMaps()" class="text-decoration-none text-dark">
             <h5 class="fw-bold mb-0">476 Steve Biko Rd, Gezina, Pretoria, 0084</h5>
-            <p class="ms-1" style="font-size: 13px; color: grey">click to whatsapp</p>
+            <p class="ms-1" style="font-size: 13px; color: grey">click to go to maps</p>
           </a>
         </div>
+
 
 
         <div class="mb-1 d-flex align-items-center">
