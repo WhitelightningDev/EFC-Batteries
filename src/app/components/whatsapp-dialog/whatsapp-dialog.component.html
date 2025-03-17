@@ -1,8 +1,8 @@
 <h2 mat-dialog-title class="dialog-title">Choose an Option</h2>
 <div mat-dialog-content class="dialog-content">
   <p>Select a message to send via WhatsApp:</p>
-  <mat-list>
-    <mat-list-item *ngFor="let option of options">
+  <mat-list class="rounded m-2 p-2">
+    <mat-list-item class="rounded m-2" *ngFor="let option of options">
       <button mat-raised-button (click)="sendMessage(option)">
         {{ option }}
       </button>
@@ -10,5 +10,5 @@
   </mat-list>
 </div>
 <div mat-dialog-actions class="dialog-actions">
-  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button class="cancelButton" mat-button (click)="closeDialog()">Cancel</button>
 </div>
