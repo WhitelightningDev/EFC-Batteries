@@ -280,15 +280,15 @@
         </div>
 
         <!-- Contact Form -->
-        <form class="p-3 border rounded shadow">
+        <form class="p-3 border rounded shadow" (ngSubmit)="sendWhatsApp()">
           <div class="mb-3">
             <label for="name" class="form-label fw-bold">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" placeholder="Enter your name" required>
           </div>
 
           <div class="mb-3">
             <label for="email" class="form-label fw-bold">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
           </div>
 
           <!-- Material Dropdown -->
@@ -296,7 +296,7 @@
             <label class="form-label fw-bold">Select Service</label>
             <mat-form-field appearance="outline" class="w-100">
               <mat-label>Choose a service</mat-label>
-              <mat-select required>
+              <mat-select [(ngModel)]="service" name="service" required>
                 <mat-option value="buy-battery">Buy a Battery</mat-option>
                 <mat-option value="battery-fitment">Battery Fitment</mat-option>
                 <mat-option value="battery-testing">Battery Testing</mat-option>
@@ -308,7 +308,7 @@
 
           <div class="mb-3">
             <label for="message" class="form-label fw-bold">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            <textarea class="form-control" id="message" [(ngModel)]="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary w-100">Send Message</button>
