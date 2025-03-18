@@ -33,13 +33,17 @@ export class HomeComponent {
     }
   }
 
-  // Method to send the form data to WhatsApp
   sendWhatsApp(): void {
+    if (!this.name || !this.email || !this.service || !this.message) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
     const phoneNumber = '+27760606376'; // Target WhatsApp number
-    const message = `*Name:* ${this.name}%0A*Email:* ${this.email}%0A*Service:* ${this.service}%0A*Message:* ${this.message}`;
+    const messageText = `*Name:* ${this.name}%0A*Email:* ${this.email}%0A*Service:* ${this.service}%0A*Message:* ${this.message}`;
 
     // Construct the WhatsApp URL
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${messageText}`;
 
     // Open WhatsApp with the pre-filled message
     window.open(whatsappUrl, '_blank');
